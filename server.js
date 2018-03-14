@@ -21,3 +21,11 @@ app.use(bodyParser.urlencoded({extended:false}));
 
 // methodOverride
 app.use(methodOverride('_method'));
+
+app.get('/', (req,res,next) => {
+    res.send('searchusers')
+})
+
+app.listen(port, () => {
+    console.log(`connected to ${port}`)
+})
